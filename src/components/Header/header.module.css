@@ -1,0 +1,4 @@
+.header {
+    background-color: rgba(144, 213, 213, 0.57);
+    grid-area: header;
+}
