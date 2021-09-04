@@ -5,15 +5,18 @@ import Header from "./components/Header/header";
 import Sidebar from "./components/Sidebar/sidebar";
 import Content from "./components/Content/content";
 import Footer from "./components/Footer/footer";
+import {BrowserRouter, Route} from "react-router-dom";
 
-function App() {
+function App(props) {
   return (
-    <div className="app-wrapper">
-      <Header/>
-      <Sidebar/>
-      <Content/>
-      <Footer/>
-    </div>
+  <BrowserRouter>
+      <div className="app-wrapper">
+          <Header/>
+          <Sidebar/>
+          <Content/>
+          <Footer/>
+      </div>
+  </BrowserRouter>
   );
 }
 

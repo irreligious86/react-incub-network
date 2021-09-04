@@ -2,3 +2,16 @@
     background-color: rgba(93, 227, 64, 0.55);
     grid-area: sidebar;
 }
+
+.sidebar-item {
+    border: 1px solid green;
+}
+
+.sidebar-item--active {
+    color: #8beeea;
+    background-color: darkcyan;
+}
+
+.sidebar-item--active a {
+    color: #8beeea;
+}
