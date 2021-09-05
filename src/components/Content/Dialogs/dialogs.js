@@ -4,7 +4,7 @@ import classes from './dialogs.module.css';
 function Dialogs() {
     return (
         <div className={classes.dialogs}>
-            <h3>Dalogs</h3>
+            <h3>Dialogs</h3>
         </div>
     )
 }

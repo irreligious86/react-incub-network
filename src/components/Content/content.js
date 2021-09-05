@@ -2,6 +2,9 @@ import React from "react";
 import classes from  './content.module.css';
 import Profile from "./Profile/profile";
 import Dialogs from "./Dialogs/dialogs";
+import Music from "./Music/music";
+import News from "./News/news";
+import Settings from "./Settings/settings";
 import {Route} from "react-router-dom";
 
 function Content() {
@@ -10,8 +13,9 @@ function Content() {
             <h1>Content</h1>
             <Route path="/profile"  component={Profile}/>
             <Route path="/dialogs"  component={Dialogs}/>
-            {/*<Profile/>*/}
-            {/*<Dialogs/>*/}
+            <Route path="/news"  component={News}/>
+            <Route path="/music"  component={Music}/>
+            <Route path="/settings"  component={Settings}/>
         </div>
     )
 }
