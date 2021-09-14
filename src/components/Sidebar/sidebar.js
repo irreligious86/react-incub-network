@@ -8,7 +8,7 @@ function Sidebar() {
             <div className={classes['sidebar-item ']}>
                 <a href="/profile">Profile</a>
             </div>
-            <div className={`${classes['sidebar-item']} ${classes['sidebar-item--active']}`}>
+            <div className={`${classes['sidebar-item ']} ${classes['sidebar-item--active']}`}>
                 <a href="/dialogs">Messages</a>
             </div>
             <div className={classes['sidebar-item ']}>
