@@ -15,3 +15,8 @@
 .sidebar-item--active a {
     color: #8beeea;
 }
+
+.active {
+    color: #8beeea;
+    background-color: darkcyan;
+}

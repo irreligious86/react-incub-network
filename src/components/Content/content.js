@@ -10,7 +10,6 @@ import {Route} from "react-router-dom";
 function Content() {
     return (
         <div className={classes.content}>
-            <h1>Content</h1>
             <Route path="/profile"  component={Profile}/>
             <Route path="/dialogs"  component={Dialogs}/>
             <Route path="/news"  component={News}/>
