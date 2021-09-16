@@ -1,13 +1,6 @@
 import React from "react";
 import classes from './messages.module.css';
 
-let messagesData = [
-    {id: 1, message: "Hello! IT is my message."},
-    {id: 2, message: "Hello! IT is my message."},
-    {id: 3, message: "Hello! IT is my message."},
-    {id: 4, message: "Hello! IT is my message."},
-    {id: 5, message: "Hello! IT is my message."},
-]
 
 const Message = props => {
     return (
@@ -22,7 +15,7 @@ const Messages = props => {
         <div className={classes.messages}>
             <h4>Messages</h4>
             {
-                messagesData.map(
+                (props.messagesData).map(
                     msg => <Message key={msg.id} id={msg.id} message={msg.message}/>
                 )
             }

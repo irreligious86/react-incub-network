@@ -5,8 +5,8 @@ function ProfileInfo() {
     return (
         <div className={classes['profile-info']}>
 profile info
-            <div>
-                image
+            <div className={classes['avatar-block']}>
+                <img src="" alt="avatar"/>
             </div>
             <div className={classes['description-block']}>
                 description

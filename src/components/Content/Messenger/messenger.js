@@ -3,11 +3,12 @@ import classes from './messenger.module.css';
 import Messages from "./Messages/messages";
 import Dialogs from "./Dialogs/dialogs";
 
-const Messenger = (props) => {
+
+const Messenger = props => {
     return (
         <div className={classes.messenger}>
-            <Dialogs/>
-            <Messages/>
+            <Dialogs dialogsData={props.dialogsData}/>
+            <Messages messagesData={props.messagesData}/>
         </div>
     )
 }
