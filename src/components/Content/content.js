@@ -1,7 +1,7 @@
 import React from "react";
 import classes from  './content.module.css';
 import Profile from "./Profile/profile";
-import Dialogs from "./Dialogs/dialogs";
+import Messenger from "./Messenger/messenger";
 import Music from "./Music/music";
 import News from "./News/news";
 import Settings from "./Settings/settings";
@@ -11,7 +11,7 @@ function Content() {
     return (
         <div className={classes.content}>
             <Route path="/profile"  component={Profile}/>
-            <Route path="/dialogs"  component={Dialogs}/>
+            <Route path="/messenger"  component={Messenger}/>
             <Route path="/news"  component={News}/>
             <Route path="/music"  component={Music}/>
             <Route path="/settings"  component={Settings}/>

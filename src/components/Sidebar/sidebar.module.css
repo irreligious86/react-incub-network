@@ -1,22 +1,30 @@
 .sidebar {
     background-color: rgba(93, 227, 64, 0.55);
     grid-area: sidebar;
+    padding: 25px;
 }
 
 .sidebar-item {
-    border: 1px solid green;
+    padding: 10px;
+    text-decoration: none;
 }
 
-.sidebar-item--active {
-    color: #8beeea;
-    background-color: darkcyan;
+.sidebar-item a{
+    text-decoration: none;
 }
 
-.sidebar-item--active a {
-    color: #8beeea;
-}
+
+/*.sidebar-item--active {*/
+/*    color: #8beeea;*/
+/*    background-color: darkcyan;*/
+/*}*/
+
+/*.sidebar-item--active a {*/
+/*    color: #8beeea;*/
+/*}*/
 
 .active {
-    color: #8beeea;
-    background-color: darkcyan;
+    color: #2536fc;
+    background-color: rgba(59, 194, 158, 0.7);
+    font-weight: bold;
 }

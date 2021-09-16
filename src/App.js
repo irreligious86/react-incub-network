@@ -7,7 +7,7 @@ import Content from "./components/Content/content";
 import Footer from "./components/Footer/footer";
 import {BrowserRouter, Route} from "react-router-dom";
 
-function App(props) {
+const App = () => {
   return (
   <BrowserRouter>
       <div className="app-wrapper">
