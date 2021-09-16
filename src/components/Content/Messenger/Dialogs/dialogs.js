@@ -27,10 +27,11 @@ const Dialogs = props => {
     return (
         <div className={classes.dialogs}>
             <h4>Dialogs</h4>
-            <Dialog id={dialogsData[0].id} name={dialogsData[0].name}/>
-            <Dialog id={dialogsData[2].id} name={dialogsData[2].name}/>
-            <Dialog id={dialogsData[4].id} name={dialogsData[4].name}/>
-
+            {
+                dialogsData.map(
+                    dialog => <Dialog key={dialog.id} id={dialog.id} name={dialog.name}/>
+                )
+            }
         </div>
     )
 }

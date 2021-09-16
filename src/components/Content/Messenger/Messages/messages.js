@@ -21,10 +21,11 @@ const Messages = props => {
     return (
         <div className={classes.messages}>
             <h4>Messages</h4>
-            <Message id={messagesData[0].id} message={messagesData[0].message}/>
-            <Message id={messagesData[1].id} message={messagesData[1].message}/>
-            <Message id={messagesData[2].id} message={messagesData[2].message}/>
-            <Message id={messagesData[3].id} message={messagesData[3].message}/>
+            {
+                messagesData.map(
+                    msg => <Message key={msg.id} id={msg.id} message={msg.message}/>
+                )
+            }
         </div>
     )
 }

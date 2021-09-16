@@ -16,11 +16,11 @@ function MyPosts() {
         <div className={classes.myPosts}>
             <h4>My posts</h4>
             <button>Add new post</button>
-            <Post id={postData[0].id} message={postData[0].message} likesCount={postData[0].likesCount}/>
-            <Post id={postData[1].id} message={postData[1].message} likesCount={postData[1].likesCount}/>
-            <Post id={postData[2].id} message={postData[2].message} likesCount={postData[2].likesCount}/>
-            <Post id={postData[3].id} message={postData[3].message} likesCount={postData[3].likesCount}/>
-            <Post id={postData[4].id} message={postData[4].message} likesCount={postData[4].likesCount}/>
+            {
+                postData.map(
+                    post => <Post key={post.id} id={post.id} message={post.message} likesCount={post.likesCount}/>
+                )
+            }
         </div>
     )
 }
