@@ -7,13 +7,19 @@ import Content from "./components/Content/content";
 import Footer from "./components/Footer/footer";
 import {BrowserRouter, Route} from "react-router-dom";
 
-const App = () => {
+
+const App = props => {
   return (
   <BrowserRouter>
       <div className="app-wrapper">
           <Header/>
           <Sidebar/>
-          <Content/>
+          <Content
+              appState={props.appState}
+          // postData={props.appState.postData}
+          // dialogsData={props.appState.dialogsData}
+          // messagesData={props.appState.messagesData}
+          />
           <Footer/>
       </div>
   </BrowserRouter>
