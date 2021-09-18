@@ -1,3 +1,20 @@
-.App {
-  text-align: center;
+.app-wrapper {
+    margin: 5px auto;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(200px, 1fr) minmax(400px, 3fr);
+    grid-template-rows: 100px minmax(420px, 3fr) 150px;
+    grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+}
+
+.app-wrapper>* {
+    border: 3px solid rgba(118, 224, 224, 0.41);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3),
+    0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
