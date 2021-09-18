@@ -14,7 +14,7 @@ const App = props => {
           <Header/>
           <Sidebar/>
           <Content
-              appState={props.appState}
+              state={props.state}
           // postData={props.appState.postData}
           // dialogsData={props.appState.dialogsData}
           // messagesData={props.appState.messagesData}

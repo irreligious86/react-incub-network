@@ -21,7 +21,7 @@ const Dialogs = props => {
         <div className={classes.dialogs}>
             <h4>Dialogs</h4>
             {
-                (props.dialogsData).map(
+                (props.dialogsState).map(
                     dialog => <Dialog key={dialog.id} id={dialog.id} name={dialog.name}/>
                 )
             }

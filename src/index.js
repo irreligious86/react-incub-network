@@ -9,7 +9,7 @@ ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
             <App
-                appState={state}
+                state={state}
                 // postData={state.postData}
                 // dialogsData={state.dialogsData}
                 // messagesData={state.messagesData}

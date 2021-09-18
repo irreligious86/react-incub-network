@@ -15,7 +15,7 @@ const Messages = props => {
         <div className={classes.messages}>
             <h4>Messages</h4>
             {
-                (props.messagesData).map(
+                (props.messagesState).map(
                     msg => <Message key={msg.id} id={msg.id} message={msg.message}/>
                 )
             }
