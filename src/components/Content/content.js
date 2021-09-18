@@ -11,8 +11,8 @@ import {Route} from "react-router-dom";
 const Content = props => {
     return (
         <div className={classes.content}>
-            <Route path="/profile"  render={ () => <Profile postData={props.appState.posts}/> }/>
-            <Route path="/messenger"  render={ () => <Messenger dialogsData={props.appState.dialogs} messagesData={props.appState.messages}/> }/>
+            <Route path="/profile"  render={ () => <Profile postData={props.appState.profile.posts}/> }/>
+            <Route path="/messenger"  render={ () => <Messenger dialogsData={props.appState.messenger.dialogs} messagesData={props.appState.messenger.messages}/> }/>
             <Route path="/news"  component={News}/>
             <Route path="/music"  component={Music}/>
             <Route path="/settings"  component={Settings}/>
