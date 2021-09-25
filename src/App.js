@@ -15,6 +15,7 @@ const App = props => {
           <Sidebar/>
           <Content
               state={props.state}
+              addPost={props.addPost}
           // postData={props.appState.postData}
           // dialogsData={props.appState.dialogsData}
           // messagesData={props.appState.messagesData}

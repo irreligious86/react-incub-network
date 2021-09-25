@@ -9,9 +9,11 @@ import {Route} from "react-router-dom";
 
 
 const Content = props => {
+    console.log('Content props: ')
+    console.log(props)
     return (
         <div className={classes.content}>
-            <Route path="/profile"  render={ () => <Profile profileState={props.state.profile}/> }/>
+            <Route path="/profile"  render={ () => <Profile profileState={props.state.profile} addPost={props.addPost}/> }/>
             <Route path="/messenger"  render={ () => <Messenger messengerState={props.state.messenger}/> }/>
             <Route path="/news"  component={News}/>
             <Route path="/music"  component={Music}/>

@@ -29,4 +29,15 @@ let state = {
     settings: {}
 }
 
+let addUser = userName => {
+    state.users.push(userName)
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 58, message: postMessage, likesCount: 0
+    };
+    state.profile.posts.push(newPost);
+}
+
 export default state;
