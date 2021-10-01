@@ -36,10 +36,10 @@ const addUser = userName => {
     state.users.push(userName)
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id: 58,
-        message: postMessage,
+        message: state.newPostText,
         likesCount: 0
     };
     state.profile.posts.push(newPost);

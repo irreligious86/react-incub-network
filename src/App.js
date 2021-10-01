@@ -13,7 +13,7 @@ const App = props => {
           <Sidebar/>
           <Content
               profilePage={props.state.profile.posts}
-              newPostText={props.state.profile.newPostText}
+              newPostText={props.state.newPostText}
               addPost={props.addPost}
               updateNewPostText={props.updateNewPostText}
           />
