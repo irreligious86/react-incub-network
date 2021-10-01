@@ -6,8 +6,8 @@
 
 }
 
-.avatar-block {
-
+.avatar-block img {
+    width: 60px;
 }
 
 .avatar-block image {

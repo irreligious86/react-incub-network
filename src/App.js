@@ -5,8 +5,6 @@ import Header from "./components/Header/header";
 import Sidebar from "./components/Sidebar/sidebar";
 import Content from "./components/Content/content";
 import Footer from "./components/Footer/footer";
-import {BrowserRouter, Route} from "react-router-dom";
-
 
 const App = props => {
   return (
@@ -14,11 +12,10 @@ const App = props => {
           <Header/>
           <Sidebar/>
           <Content
-              state={props.state}
+              profilePage={props.state.profile.posts}
+              newPostText={props.state.profile.newPostText}
               addPost={props.addPost}
-          // postData={props.appState.postData}
-          // dialogsData={props.appState.dialogsData}
-          // messagesData={props.appState.messagesData}
+              updateNewPostText={props.updateNewPostText}
           />
           <Footer/>
       </div>

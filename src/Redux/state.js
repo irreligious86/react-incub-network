@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     profile: {
         posts: [
@@ -8,6 +10,7 @@ let state = {
             {id: 5, message: "Hello! It is my post.", likesCount: 3},
         ]
     },
+    newPostText: "IT-camasutra.com",
     messenger: {
         messages: [
             {id: 1, message: "Hello! IT is my message."},
@@ -29,15 +32,22 @@ let state = {
     settings: {}
 }
 
-let addUser = userName => {
+const addUser = userName => {
     state.users.push(userName)
 }
 
 export let addPost = (postMessage) => {
     let newPost = {
-        id: 58, message: postMessage, likesCount: 0
+        id: 58,
+        message: postMessage,
+        likesCount: 0
     };
     state.profile.posts.push(newPost);
+}
+
+export const updateNewPostText = newText => {
+    state.newPostText = newText;
+    rerenderEntireTree(state);
 }
 
 export default state;
