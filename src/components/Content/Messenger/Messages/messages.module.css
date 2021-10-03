@@ -2,6 +2,15 @@
     background-color: rgba(190, 220, 139, 0.5);
 }
 
+.messages-controls {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
 .message {
     border: 1px solid lawngreen;
     border-radius: 10px;

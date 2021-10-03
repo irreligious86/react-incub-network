@@ -1,21 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import state, {addPost, updateNewPostText} from "./Redux/state";
+import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
-import './index.css';
-import App from './App';
-import state from "./Redux/state";
+import App from "./App";
 
-ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App
-                state={state}
-                // postData={state.postData}
-                // dialogsData={state.dialogsData}
-                // messagesData={state.messagesData}
-            />
-        </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+export const rerenderEntireTree = state => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <BrowserRouter>
+                <App
+                    state={state}
+                    addPost={addPost}
+                    updateNewPostText={updateNewPostText}
+                />
+            </BrowserRouter>
+        </React.StrictMode>,
+        document.getElementById('root')
+    )
+}
+
+
+rerenderEntireTree(state);
+
+
 
