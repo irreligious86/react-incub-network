@@ -1,10 +1,10 @@
 import React from 'react';
-import state, {addPost, updateNewPostText} from "./Redux/state";
+import state, {addPost, subscribe, updateNewPostText} from "./Redux/state";
 import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
 
-export const rerenderEntireTree = state => {
+let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -22,5 +22,5 @@ export const rerenderEntireTree = state => {
 
 rerenderEntireTree(state);
 
-
+subscribe(rerenderEntireTree);
 

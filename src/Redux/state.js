@@ -1,4 +1,4 @@
-import {rerenderEntireTree} from "../index";
+// import {rerenderEntireTree} from "../index";
 
 let state = {
     profile: {
@@ -32,6 +32,12 @@ let state = {
     settings: {}
 }
 
+window.state = state;
+
+let rerenderEntireTree = () => {
+    console.log('rerender');
+}
+
 const addUser = userName => {
     state.users.push(userName)
 }
@@ -50,6 +56,10 @@ export const addPost = () => {
 export const updateNewPostText = newText => {
     state.newPostText = newText;
     rerenderEntireTree(state);
+}
+
+export let subscribe = observer => {
+    rerenderEntireTree = observer;
 }
 
 export default state;
