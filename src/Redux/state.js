@@ -9,7 +9,7 @@ let state = {
             {id: 4, message: "Hello! It is my post.", likesCount: 3},
             {id: 5, message: "Hello! It is my post.", likesCount: 3},
         ]
-    },
+    } ,
     newPostText: "IT-camasutra.com",
     messenger: {
         messages: [
