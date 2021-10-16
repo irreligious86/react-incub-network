@@ -13,10 +13,11 @@ const Content = props => {
             <Route
                 path="/profile"
                 render={() => <Profile
+                    dispatch={props.dispatch}
                     profilePage={props.profilePage}
                     newPostText={props.newPostText}
-                    addPost={props.addPost}
-                    updateNewPostText={props.updateNewPostText}
+                    // addPost={props.addPost}
+                    // updateNewPostText={props.updateNewPostText}
                 />}/>
             <Route
                 path="/messenger"

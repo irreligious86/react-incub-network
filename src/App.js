@@ -11,11 +11,12 @@ const App = props => {
           <Header/>
           <Sidebar/>
           <Content
+              dispatch={props.dispatch}
               state={props.state}
               profilePage={props.state.profile.posts}
               newPostText={props.state.newPostText}
-              addPost={props.addPost}
-              updateNewPostText={props.updateNewPostText}
+              // addPost={props.addPost}
+              // updateNewPostText={props.updateNewPostText}
           />
           <Footer/>
       </div>
