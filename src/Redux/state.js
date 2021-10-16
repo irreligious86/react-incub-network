@@ -1,5 +1,6 @@
 
 let store = {
+
     _state: {
         profile: {
             posts: [
@@ -31,28 +32,38 @@ let store = {
         music: {},
         settings: {}
     },
+    _callSubscriber () { console.log('rerender') },
+
     getState () {
         return this._state
-    },
-    _callSubscriber () { console.log('rerender') },
-    addUser (userName) { this._state.users.push(userName) },
-    addPost () {
-        let newPost = {
-            id: 58,
-            message: this._state.newPostText,
-            likesCount: 0
-        };
-        this._state.profile.posts.push(newPost);
-        this._state.newPostText = '';
-        this._callSubscriber(this._state);
-    },
-    updateNewPostText (newText) {
-        this._state.newPostText = newText;
-        this._callSubscriber(this._state);
     },
     subscribe (observer) {
         this._callSubscriber = observer;
     },
+
+    // addUser (userName) { this._state.users.push(userName) },
+
+    addPost () {
+
+    },
+    updateNewPostText (newText) {
+
+    },
+    dispatch (action) {
+        if ( action.type === "ADD-POST" ) {
+            let newPost = {
+                id: 58,
+                message: this._state.newPostText,
+                likesCount: 0
+            };
+            this._state.profile.posts.push(newPost);
+            this._state.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if ( action.type === "UPDATE-NEW-POST-TEXT" ) {
+            this._state.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        }
+    }
 }
 
 
