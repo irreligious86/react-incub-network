@@ -13,6 +13,7 @@ const Content = props => {
             <Route
                 path="/profile"
                 render={() => <Profile
+                    dispatch={props.dispatch}
                     profilePage={props.profilePage}
                     newPostText={props.newPostText}
                     addPost={props.addPost}

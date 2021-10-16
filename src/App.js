@@ -11,6 +11,7 @@ const App = props => {
           <Header/>
           <Sidebar/>
           <Content
+              dispatch={props.dispatch}
               state={props.state}
               profilePage={props.state.profile.posts}
               newPostText={props.state.newPostText}

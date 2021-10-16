@@ -41,14 +41,6 @@ let store = {
         this._callSubscriber = observer;
     },
 
-    // addUser (userName) { this._state.users.push(userName) },
-
-    addPost () {
-
-    },
-    updateNewPostText (newText) {
-
-    },
     dispatch (action) {
         if ( action.type === "ADD-POST" ) {
             let newPost = {
