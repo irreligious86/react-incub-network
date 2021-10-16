@@ -34,7 +34,7 @@ let store = {
     getState () {
         return this._state
     },
-    rerenderEntireTree() { console.log('rerender') },
+    _callSubscriber () { console.log('rerender') },
     addUser (userName) { this._state.users.push(userName) },
     addPost () {
         let newPost = {
@@ -43,14 +43,15 @@ let store = {
             likesCount: 0
         };
         this._state.profile.posts.push(newPost);
-        this.updateNewPostText('');
+        this._state.newPostText = '';
+        this._callSubscriber(this._state);
     },
     updateNewPostText (newText) {
         this._state.newPostText = newText;
-        this.rerenderEntireTree(this._state);
+        this._callSubscriber(this._state);
     },
     subscribe (observer) {
-        this.rerenderEntireTree = observer;
+        this._callSubscriber = observer;
     },
 }
 
