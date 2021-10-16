@@ -15,8 +15,8 @@ const App = props => {
               state={props.state}
               profilePage={props.state.profile.posts}
               newPostText={props.state.newPostText}
-              addPost={props.addPost}
-              updateNewPostText={props.updateNewPostText}
+              // addPost={props.addPost}
+              // updateNewPostText={props.updateNewPostText}
           />
           <Footer/>
       </div>
