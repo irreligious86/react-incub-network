@@ -24,7 +24,12 @@ const Messages = props => {
             <h4>Messages</h4>
             <div className={classes['messages-controls']}>
                 <button type='button' onClick={addMessage}>Add message</button>
-                <textarea ref={newMsgElement} name="" id="" cols="40" rows="1"></textarea>
+                <textarea
+                    placeholder='Enter your message: '
+                    ref={newMsgElement}
+                    name="" id=""
+                    cols="40"
+                    rows="1"></textarea>
             </div>
             {
                 (props.messagesState).map(
