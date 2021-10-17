@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './messages.module.css';
-
+import {sendMessageCreator, updateNewMessageBodyCreator} from "../../../../Redux/state";
 
 const Message = props => {
     return (
@@ -10,26 +10,31 @@ const Message = props => {
     )
 }
 
-
 const Messages = props => {
-
-    let newMsgElement = React.createRef();
-
-    const addMessage = () => {
-        let text = newMsgElement.current.value
-        alert(`add new message: ${text}`);
+    const newMessageBody =  props.store._state.messenger.newMessageBody;
+    const onSendMessageClick = () => {
+        props.dispatch(sendMessageCreator());
     }
+    const onNewMessageChange = (e) => {
+        let body = e.target.value;
+        props.dispatch(updateNewMessageBodyCreator(body));
+    }
+
     return (
         <div className={classes.messages}>
             <h4>Messages</h4>
             <div className={classes['messages-controls']}>
-                <button type='button' onClick={addMessage}>Add message</button>
+                <button
+                    type='button'
+                    onClick={onSendMessageClick}
+                >
+                    Add message
+                </button>
                 <textarea
-                    placeholder='Enter your message: '
-                    ref={newMsgElement}
-                    name="" id=""
-                    cols="40"
-                    rows="1"></textarea>
+                    placeholder='Enter your message:'
+                    value={newMessageBody}
+                    onChange={onNewMessageChange}
+                     > </textarea>
             </div>
             {
                 (props.messagesState).map(

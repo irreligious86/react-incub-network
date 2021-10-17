@@ -15,6 +15,7 @@ const App = props => {
               state={props.state}
               profilePage={props.state.profile.posts}
               newPostText={props.state.newPostText}
+              store={props.store}
               // addPost={props.addPost}
               // updateNewPostText={props.updateNewPostText}
           />
