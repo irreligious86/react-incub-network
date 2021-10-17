@@ -22,7 +22,12 @@ const Content = props => {
             <Route
                 path="/messenger"
                 render={() => <Messenger
-                    messengerState={props.state.messenger}/>}/>
+                    messengerState={props.state.messenger}
+                    store={props.store}
+                    dispatch={props.dispatch}
+                />}
+
+            />
             <Route
                 path="/news"
                 component={News}/>

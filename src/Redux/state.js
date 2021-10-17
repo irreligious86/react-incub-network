@@ -32,7 +32,7 @@ let store = {
                 {name: 'John', id: 4},
                 {name: 'jack', id: 5}
             ],
-            newMessageBody: ""
+            newMessageBody: ''
         },
         news: {},
         music: {},
@@ -66,10 +66,12 @@ let store = {
             store._state.messenger.newMessageBody = action.body;
             this._callSubscriber(this._state);
         } else if (action.type === SEND_MESSAGE) {
-            let body = store._state.messenger.newMessageBody = action.body;
-            store._state.messenger.newMessageBody = '';
-            this._state.messenger.messages.push({id: 100, message: body})
-            this._callSubscriber(this._state);
+            let body = this._state.messenger.newMessageBody;
+            this._state.messenger.newMessageBody = '';
+            if ( body !== '' ) {
+                this._state.messenger.messages.push({id: 100, message: body});
+                this._callSubscriber(this._state);
+            }
         }
     },
 
@@ -83,7 +85,7 @@ export const updateNewPostTextActionCreator = (text) => ({
     type: UPDATE_NEW_POST_TEXT,
     newText: text
 });
-export const sendMessaageCreator = () => ({
+export const sendMessageCreator = () => ({
     type: SEND_MESSAGE
 });
 export const updateNewMessageBodyCreator = (body) => ({
