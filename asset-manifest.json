@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/samuraj-v1.2/static/css/main.d1ceed8f.chunk.css",
-    "main.js": "/samuraj-v1.2/static/js/main.6aa0f832.chunk.js",
-    "main.js.map": "/samuraj-v1.2/static/js/main.6aa0f832.chunk.js.map",
+    "main.css": "/samuraj-v1.2/static/css/main.362af753.chunk.css",
+    "main.js": "/samuraj-v1.2/static/js/main.482de89d.chunk.js",
+    "main.js.map": "/samuraj-v1.2/static/js/main.482de89d.chunk.js.map",
     "runtime-main.js": "/samuraj-v1.2/static/js/runtime-main.740e7744.js",
     "runtime-main.js.map": "/samuraj-v1.2/static/js/runtime-main.740e7744.js.map",
     "static/js/2.f746ad11.chunk.js": "/samuraj-v1.2/static/js/2.f746ad11.chunk.js",
     "static/js/2.f746ad11.chunk.js.map": "/samuraj-v1.2/static/js/2.f746ad11.chunk.js.map",
     "index.html": "/samuraj-v1.2/index.html",
-    "static/css/main.d1ceed8f.chunk.css.map": "/samuraj-v1.2/static/css/main.d1ceed8f.chunk.css.map",
+    "static/css/main.362af753.chunk.css.map": "/samuraj-v1.2/static/css/main.362af753.chunk.css.map",
     "static/js/2.f746ad11.chunk.js.LICENSE.txt": "/samuraj-v1.2/static/js/2.f746ad11.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.740e7744.js",
     "static/js/2.f746ad11.chunk.js",
-    "static/css/main.d1ceed8f.chunk.css",
-    "static/js/main.6aa0f832.chunk.js"
+    "static/css/main.362af753.chunk.css",
+    "static/js/main.482de89d.chunk.js"
   ]
 }
