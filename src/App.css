@@ -1,13 +1,14 @@
 .app-wrapper {
     background-color: rgba(135, 142, 238, 0.36);
-
-    margin: 5px auto;
+    height: 100vh;
+    margin: 0 auto;
     padding: 10px;
     text-align: center;
     display: grid;
     gap: 16px;
     grid-template-columns: minmax(200px, 1fr) minmax(400px, 3fr);
-    grid-template-rows: 100px minmax(420px, 3fr) 150px;
+    /*grid-template-rows: 100px minmax(420px, 1fr) 150px;*/
+    grid-auto-rows: 100px 1fr 200px;
     grid-template-areas:
             "header header"
             "sidebar content"
@@ -15,6 +16,7 @@
 }
 
 .app-wrapper>* {
+    background-color: rgba(185, 184, 143, 0.56);
     border: 3px solid rgba(38, 79, 79, 0.41);
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3),
